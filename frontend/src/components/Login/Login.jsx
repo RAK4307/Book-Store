@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
-import axios from 'axios';
+import apiClient from '../../api';
 
 const Login = ({ setIsLoggedIn }) => {
   const [username, setUsername] = useState('');
@@ -12,7 +12,7 @@ const Login = ({ setIsLoggedIn }) => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:5000/login', {
+      const res = await apiClient.post('/login', {
         username,
         password,
       });
