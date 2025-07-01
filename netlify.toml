@@ -2,5 +2,5 @@
 
 [build]
   base    = "frontend" # The subdirectory where your frontend code lives
-  publish = "frontend/dist" # The directory that contains the built site
+  publish = "dist" # The directory that contains the built site
   command = "npm run build" # The command to build your site
